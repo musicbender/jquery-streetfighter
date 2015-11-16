@@ -3,6 +3,11 @@ html, body {
     padding: 0;
 }
 
+h2 {
+    font-family: 'Orbitron';
+    font-size: 2.25em;
+}
+
 header {
     margin: 0 auto;
     background-color: black;
@@ -77,12 +82,43 @@ section {
 /*Text*/
 
 .text {
-    display: inline-block;
     margin: 0 auto;
-    width: 30em;
-    height: 30em;
+    width: 500px;
+    height: 250px;
     float: right;
 }
+
+.logo {
+    background-image: url('../images/SF_Logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 750px;
+    height: 375px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 475px;
+}
+
+.text-click {
+   width: 300px; 
+    position: absolute;
+    top: 75px;
+    left:565px;
+}
+
+.text-pressx {
+    width: 300px;
+    position: absolute;
+    top: 275px;
+    left: 800px;
+}
+
+.text-click, .text-pressx {
+    display: block;
+}
+
+
 
 footer {
     margin: 0 auto;

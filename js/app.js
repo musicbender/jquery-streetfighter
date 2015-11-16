@@ -1,5 +1,15 @@
 $(document).ready(function() {
     
+    /*fade in text and logo*/
+    $('.logo').fadeIn(3000, function(){
+        $(this).fadeOut(2000, function(){
+            $(this).css('display', 'none');
+            $('.text-click').fadeIn(2000, function(){
+              $('.text-pressx').fadeIn(1000);  
+            });
+        });
+    });
+    
     $('.ryu').mouseenter(function(){
         $('.ryu-still').hide();
         $('.ryu-ready').show();

@@ -26,8 +26,33 @@ $(document).ready(function() {
         $('.hadouken').hide();
         $('.ryu-ready').show();
     });
+    
+    /*Press X for Cool Pose*/
+    $(document).keydown(function(event){
+        var whichKey = event.keyCode;
+        
+        if (whichKey == 88) {
+            $('.ryu-still').hide();
+            $('.ryu-ready').hide();
+            $('.ryu-throwing').hide();
+            $('.hadouken').hide();
+            $('.ryu-cool').show();
+        }
+        else {
+            return;
+        }
+     });
+    
+    $(document).keyup(function(event){
+        var whichKey = event.keyCode || event.which;
+        if (whichKey = 88) {
+            $('.ryu-cool').hide();
+            $('.ryu-still').show();
+        }
+    });
 });
 
+/*Play hadouken sound*/
 function playHadouken () {
     $('#hadouken-sound')[0].volume = 0.5;
     $('#hadouken-sound')[0].load();
